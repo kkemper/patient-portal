@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  facilityID: 1
+  demoID: 1
+  specialties: MyString
+  phoneNumber: 
+
+two:
+  facilityID: 1
+  demoID: 1
+  specialties: MyString
+  phoneNumber: 

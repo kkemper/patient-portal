@@ -1,0 +1,65 @@
+<%= form_for(@patient) do |f| %>
+  <% if @patient.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@patient.errors.count, "error") %> prohibited this patient from being saved:</h2>
+
+      <ul>
+      <% @patient.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :patientID %><br>
+    <%= f.number_field :patientID %>
+  </div>
+  <div class="field">
+    <%= f.label :demoID %><br>
+    <%= f.text_field :demoID %>
+  </div>
+  <div class="field">
+    <%= f.label :fName %><br>
+    <%= f.text_field :fName %>
+  </div>
+  <div class="field">
+    <%= f.label :lName %><br>
+    <%= f.text_field :lName %>
+  </div>
+  <div class="field">
+    <%= f.label :birthDate %><br>
+    <%= f.date_select :birthDate %>
+  </div>
+  <div class="field">
+    <%= f.label :age %><br>
+    <%= f.text_field :age %>
+  </div>
+  <div class="field">
+    <%= f.label :gender %><br>
+    <%= f.text_field :gender %>
+  </div>
+  <div class="field">
+    <%= f.label :phone %><br>
+    <%= f.text_field :phone %>
+  </div>
+  <div class="field">
+    <%= f.label :email %><br>
+    <%= f.text_field :email %>
+  </div>
+  <div class="field">
+    <%= f.label :allergies %><br>
+    <%= f.text_field :allergies %>
+  </div>
+  <div class="field">
+    <%= f.label :currentMedication %><br>
+    <%= f.text_field :currentMedication %>
+  </div>
+  <div class="field">
+    <%= f.label :clinicalTrials %><br>
+    <%= f.text_field :clinicalTrials %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

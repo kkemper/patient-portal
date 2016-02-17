@@ -1,4 +1,15 @@
 Rails.application.routes.draw do
+  resources :clinical_visits
+  resources :medical_facilities
+  resources :physicians
+  resources :physicians
+  resources :demographics
+  resources :patients
+  resources :user_names
+  resources :coverages
+  resources :insurances
+  resources :medical_histories
+  resources :medical_conditions
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  physicianID: 1
+  demoID: 1
+  fName: MyString
+  lname: MyString
+  specialty: 
+
+two:
+  physicianID: 1
+  demoID: 1
+  fName: MyString
+  lname: MyString
+  specialty: 

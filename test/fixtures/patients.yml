@@ -1,0 +1,29 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  patientID: 1
+  demoID: 
+  fName: MyString
+  lName: MyString
+  birthDate: 2016-02-16
+  age: 
+  gender: MyString
+  phone: 
+  email: MyString
+  allergies: MyString
+  currentMedication: MyString
+  clinicalTrials: 
+
+two:
+  patientID: 1
+  demoID: 
+  fName: MyString
+  lName: MyString
+  birthDate: 2016-02-16
+  age: 
+  gender: MyString
+  phone: 
+  email: MyString
+  allergies: MyString
+  currentMedication: MyString
+  clinicalTrials: 

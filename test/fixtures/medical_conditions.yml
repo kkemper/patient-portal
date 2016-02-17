@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  medicalID: 1
+  name: MyString
+  symptom: MyString
+  description: MyString
+
+two:
+  medicalID: 1
+  name: MyString
+  symptom: MyString
+  description: MyString

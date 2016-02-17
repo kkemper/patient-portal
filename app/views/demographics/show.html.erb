@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Demoid:</strong>
+  <%= @demographic.demoID %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @demographic.address %>
+</p>
+
+<p>
+  <strong>City:</strong>
+  <%= @demographic.city %>
+</p>
+
+<p>
+  <strong>State:</strong>
+  <%= @demographic.state %>
+</p>
+
+<p>
+  <strong>Zipcode:</strong>
+  <%= @demographic.zipcode %>
+</p>
+
+<p>
+  <strong>Country:</strong>
+  <%= @demographic.country %>
+</p>
+
+<p>
+  <strong>Longitude:</strong>
+  <%= @demographic.longitude %>
+</p>
+
+<p>
+  <strong>Latitude:</strong>
+  <%= @demographic.latitude %>
+</p>
+
+<%= link_to 'Edit', edit_demographic_path(@demographic) %> |
+<%= link_to 'Back', demographics_path %>

@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Patientid:</strong>
+  <%= @coverage.patientID %>
+</p>
+
+<p>
+  <strong>Policyid:</strong>
+  <%= @coverage.policyID %>
+</p>
+
+<p>
+  <strong>Expirationdate:</strong>
+  <%= @coverage.expirationDate %>
+</p>
+
+<%= link_to 'Edit', edit_coverage_path(@coverage) %> |
+<%= link_to 'Back', coverages_path %>

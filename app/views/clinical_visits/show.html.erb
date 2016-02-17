@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Visitid:</strong>
+  <%= @clinical_visit.visitID %>
+</p>
+
+<p>
+  <strong>Patientid:</strong>
+  <%= @clinical_visit.patientID %>
+</p>
+
+<p>
+  <strong>Physicianid:</strong>
+  <%= @clinical_visit.physicianID %>
+</p>
+
+<p>
+  <strong>Facilityid:</strong>
+  <%= @clinical_visit.facilityID %>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @clinical_visit.date %>
+</p>
+
+<p>
+  <strong>Visittime:</strong>
+  <%= @clinical_visit.visitTime %>
+</p>
+
+<p>
+  <strong>Visittype:</strong>
+  <%= @clinical_visit.visitType %>
+</p>
+
+<p>
+  <strong>Diagnosis:</strong>
+  <%= @clinical_visit.diagnosis %>
+</p>
+
+<%= link_to 'Edit', edit_clinical_visit_path(@clinical_visit) %> |
+<%= link_to 'Back', clinical_visits_path %>

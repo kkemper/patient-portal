@@ -1,0 +1,33 @@
+<%= form_for(@insurance) do |f| %>
+  <% if @insurance.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@insurance.errors.count, "error") %> prohibited this insurance from being saved:</h2>
+
+      <ul>
+      <% @insurance.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :policyID %><br>
+    <%= f.number_field :policyID %>
+  </div>
+  <div class="field">
+    <%= f.label :providerName %><br>
+    <%= f.text_field :providerName %>
+  </div>
+  <div class="field">
+    <%= f.label :coverageDetails %><br>
+    <%= f.text_field :coverageDetails %>
+  </div>
+  <div class="field">
+    <%= f.label :providerContact %><br>
+    <%= f.text_field :providerContact %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

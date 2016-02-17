@@ -1,0 +1,41 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Clinical Visits</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Visitid</th>
+      <th>Patientid</th>
+      <th>Physicianid</th>
+      <th>Facilityid</th>
+      <th>Date</th>
+      <th>Visittime</th>
+      <th>Visittype</th>
+      <th>Diagnosis</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @clinical_visits.each do |clinical_visit| %>
+      <tr>
+        <td><%= clinical_visit.visitID %></td>
+        <td><%= clinical_visit.patientID %></td>
+        <td><%= clinical_visit.physicianID %></td>
+        <td><%= clinical_visit.facilityID %></td>
+        <td><%= clinical_visit.date %></td>
+        <td><%= clinical_visit.visitTime %></td>
+        <td><%= clinical_visit.visitType %></td>
+        <td><%= clinical_visit.diagnosis %></td>
+        <td><%= link_to 'Show', clinical_visit %></td>
+        <td><%= link_to 'Edit', edit_clinical_visit_path(clinical_visit) %></td>
+        <td><%= link_to 'Destroy', clinical_visit, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Clinical visit', new_clinical_visit_path %>

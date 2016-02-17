@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Medical Facilities</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Facilityid</th>
+      <th>Demoid</th>
+      <th>Specialties</th>
+      <th>Phonenumber</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @medical_facilities.each do |medical_facility| %>
+      <tr>
+        <td><%= medical_facility.facilityID %></td>
+        <td><%= medical_facility.demoID %></td>
+        <td><%= medical_facility.specialties %></td>
+        <td><%= medical_facility.phoneNumber %></td>
+        <td><%= link_to 'Show', medical_facility %></td>
+        <td><%= link_to 'Edit', edit_medical_facility_path(medical_facility) %></td>
+        <td><%= link_to 'Destroy', medical_facility, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Medical facility', new_medical_facility_path %>
