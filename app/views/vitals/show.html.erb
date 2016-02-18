@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Vitalid:</strong>
+  <%= @vital.vitalID %>
+</p>
+
+<p>
+  <strong>Patientid:</strong>
+  <%= @vital.patientID %>
+</p>
+
+<p>
+  <strong>Vital type:</strong>
+  <%= @vital.vital_type %>
+</p>
+
+<p>
+  <strong>Datetime:</strong>
+  <%= @vital.dateTime %>
+</p>
+
+<p>
+  <strong>Vitaldetails:</strong>
+  <%= @vital.vitalDetails %>
+</p>
+
+<p>
+  <strong>Units:</strong>
+  <%= @vital.Units %>
+</p>
+
+<%= link_to 'Edit', edit_vital_path(@vital) %> |
+<%= link_to 'Back', vitals_path %>

@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  vitalID: 1
+  patientID: 1
+  vital_type: MyString
+  dateTime: 2016-02-17 11:21:47
+  vitalDetails: MyString
+  Units: MyString
+
+two:
+  vitalID: 1
+  patientID: 1
+  vital_type: MyString
+  dateTime: 2016-02-17 11:21:47
+  vitalDetails: MyString
+  Units: MyString
