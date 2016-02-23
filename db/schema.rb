@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160223184913) do
+ActiveRecord::Schema.define(version: 20160223192001) do
 
   create_table "clinical_visits", force: :cascade do |t|
     t.string   "visitID"
@@ -120,7 +120,7 @@ ActiveRecord::Schema.define(version: 20160223184913) do
     t.string   "vitalID"
     t.string   "patientID"
     t.string   "vital_type"
-    t.time     "dateTime"
+    t.datetime "dateTime"
     t.string   "vitalDetails"
     t.string   "Units"
     t.datetime "created_at",   null: false
