@@ -11,31 +11,31 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160217162147) do
+ActiveRecord::Schema.define(version: 20160223184913) do
 
   create_table "clinical_visits", force: :cascade do |t|
-    t.integer  "visitID"
-    t.integer  "patientID"
-    t.integer  "physicianID"
-    t.integer  "facilityID"
+    t.string   "visitID"
+    t.string   "patientID"
+    t.string   "physicianID"
+    t.string   "facilityID"
     t.date     "date"
     t.time     "visitTime"
-    t.integer  "visitType"
-    t.string   "diagnosis"
+    t.string   "visitType"
+    t.text     "diagnosis"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
   end
 
   create_table "coverages", force: :cascade do |t|
-    t.integer  "patientID"
-    t.integer  "policyID"
+    t.string   "patientID"
+    t.string   "policyID"
     t.date     "expirationDate"
     t.datetime "created_at",     null: false
     t.datetime "updated_at",     null: false
   end
 
   create_table "demographics", force: :cascade do |t|
-    t.integer  "demoID"
+    t.string   "demoID"
     t.string   "address"
     t.string   "city"
     t.string   "state"
@@ -48,7 +48,7 @@ ActiveRecord::Schema.define(version: 20160217162147) do
   end
 
   create_table "insurances", force: :cascade do |t|
-    t.integer  "policyID"
+    t.string   "policyID"
     t.string   "providerName"
     t.string   "coverageDetails"
     t.string   "providerContact"
@@ -57,68 +57,68 @@ ActiveRecord::Schema.define(version: 20160217162147) do
   end
 
   create_table "medical_conditions", force: :cascade do |t|
-    t.integer  "medicalID"
+    t.string   "medicalID"
     t.string   "name"
-    t.string   "symptom"
-    t.string   "description"
+    t.text     "symptom"
+    t.text     "description"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
   end
 
   create_table "medical_facilities", force: :cascade do |t|
-    t.integer  "facilityID"
-    t.integer  "demoID"
-    t.string   "specialties"
-    t.integer  "phoneNumber"
+    t.string   "facilityID"
+    t.string   "demoID"
+    t.text     "specialties"
+    t.string   "phoneNumber"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
   end
 
   create_table "medical_histories", force: :cascade do |t|
-    t.integer  "patientID"
-    t.integer  "medicalID"
+    t.string   "patientID"
+    t.string   "medicalID"
     t.date     "timeDiagnosed"
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
   end
 
   create_table "patients", force: :cascade do |t|
-    t.integer  "patientID"
-    t.integer  "demoID"
+    t.text     "patientID"
+    t.text     "demoID"
     t.string   "fName"
     t.string   "lName"
     t.date     "birthDate"
     t.integer  "age"
     t.string   "gender"
-    t.integer  "phone"
+    t.string   "phone"
     t.string   "email"
-    t.string   "allergies"
-    t.string   "currentMedication"
-    t.integer  "clinicalTrials"
+    t.text     "allergies"
+    t.text     "currentMedication"
+    t.text     "clinicalTrials"
     t.datetime "created_at",        null: false
     t.datetime "updated_at",        null: false
   end
 
   create_table "physicians", force: :cascade do |t|
-    t.integer  "physicianID"
-    t.integer  "demoID"
+    t.string   "physicianID"
+    t.string   "demoID"
     t.string   "fName"
     t.string   "lname"
-    t.string   "specialty"
+    t.text     "specialty"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
   end
 
   create_table "user_names", force: :cascade do |t|
     t.string   "username"
-    t.integer  "patientID"
+    t.string   "patientID"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "vitals", force: :cascade do |t|
-    t.integer  "vitalID"
-    t.integer  "patientID"
+    t.string   "vitalID"
+    t.string   "patientID"
     t.string   "vital_type"
     t.time     "dateTime"
     t.string   "vitalDetails"
