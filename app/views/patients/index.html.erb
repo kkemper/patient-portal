@@ -5,7 +5,6 @@
 <table>
   <thead>
     <tr>
-      <th>Patientid</th>
       <th>Demoid</th>
       <th>Fname</th>
       <th>Lname</th>
@@ -24,7 +23,6 @@
   <tbody>
     <% @patients.each do |patient| %>
       <tr>
-        <td><%= patient.patientID %></td>
         <td><%= patient.demoID %></td>
         <td><%= patient.fName %></td>
         <td><%= patient.lName %></td>

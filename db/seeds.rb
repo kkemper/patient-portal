@@ -6,12 +6,16 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-clinical_visits.create[
-({visitID: 9, patientID: 1, physicianID: 2, facilityID: 1, visitDate:'2010-05-16', visitTime:'07:25:10', visitType:'NA', diagnosis:'NA'},
-{visitID: 10, patientID: 2, physicianID: 1, facilityID: 2, visitDate:'2010-05-16', visitTime:'07:25:10', visitType:'NA', diagnosis:'NA'},
-{visitID: 11, patientID: 3, physicianID: 1, facilityID: 2, visitDate:'2010-05-16', visitTime:'07:25:10', visitType:'NA', diagnosis:'NA'},
-{visitID: 12, patientID: 4, physicianID: 1, facilityID: 2, visitDate:'2010-05-16', visitTime:'07:25:10', visitType:'NA', diagnosis:'NA'},
-{visitID: 13, patientID: 5, physicianID: 1, facilityID: 2, visitDate:'2010-05-16', visitTime:'07:25:10', visitType:'NA', diagnosis:'NA'},
-{visitID: 14, patientID: 6, physicianID: 1, facilityID: 2, visitDate:'2010-05-16', visitTime:'07:25:10', visitType:'NA', diagnosis:'NA'},
-{visitID: 915 patientID: 7, physicianID: 2, facilityID: 1, visitDate:'2010-05-16', visitTime:'07:25:10', visitType:'NA', diagnosis:'NA'})]
-;
+
+
+100.times do |n|
+	fname = Faker::Name.first_name
+	lname = Faker::Name.last_name
+	birthdate = Faker::Date.backward
+	phone = Faker::PhoneNumber.cell_phone
+	email = Faker::Internet.email
+	allergies = Faker::Hipster.words(4)
+	currentMedication = Faker::Hipster.words(3)
+	clinicalTrials = Faker::Beer.name
+	Patient.create!(fName: fname, lName: lname, birthDate: birthdate, phone: phone, email: email, allergies: allergies, currentMedication: currentMedication, clinicalTrials: clinicalTrials)
+end
