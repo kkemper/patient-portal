@@ -1,8 +1,70 @@
+<div class="container">
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Dashboards</h1>
+<h1>Dashboard</h1>
+<div class="row">
+  <div id="patient_details" class="col-md-4">
+    <h2>Patient</h2>
+    <ul>
+      <li><%= patient.fname %> <%= patient.lname %></li>
+      <li>ID: <%= patient.id %></li>
+      <li>Date of Birth<%= patient.birthdate %></li>
+      <li>Age: </li>
+      </ul>
+  </div>
 
-<table>
+  <div id="medication" class="col-md-4">
+    <h2>Medication</h2>
+    <ul>
+      <% @medications.each do |medication| %>
+      <li><%=medication %></li>
+      <% end %>
+    </ul>
+  </div>
+
+  <div id="problems" class="col-md-4">
+  <h2>Problems</h2>
+  <ul>
+    <% @medical_history.each do |problem| %>
+    <li><%=problem%><%=date%></li>
+    <% end %>
+  </ul>
+  </div>
+</div>
+
+<div class="row">
+  <div id="Vitals" class="col-md-4">
+    <h2>Clinical Vitals</h2>
+    <ul>
+      <% @vitals.each do |vital| %>
+      <li><%=vitals%></li>
+      <% end %>
+    </ul>
+  </div>
+
+  <div id="patient_vitals" class="col-md-4">
+    <h2>Patient Vitals</h2>
+    <ul>
+      <% @vitals.each do |vital|%>
+      <li><%=vitals%></li>
+      <% end %>
+    </ul>
+  </div>
+
+  <div id="allergies" class="col-med-4">
+    <h2>Allergies</h2>
+    <ul>
+     <% @allergy.each do |allergy| %>
+      <li><%=allergy %></li>
+     <%end%>
+    </ul>
+  </div>
+</div>  
+
+
+
+
+<!--<table>
   <thead>
     <tr>
       <th colspan="3"></th>
@@ -23,3 +85,6 @@
 <br>
 
 <%= link_to 'New Dashboard', new_dashboard_path %>
+-->
+
+</div>
