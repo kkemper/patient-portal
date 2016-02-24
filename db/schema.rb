@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160223215556) do
+ActiveRecord::Schema.define(version: 20160224005948) do
 
   create_table "clinical_visits", force: :cascade do |t|
     t.string   "patientID"
@@ -31,6 +31,11 @@ ActiveRecord::Schema.define(version: 20160223215556) do
     t.date     "expirationDate"
     t.datetime "created_at",     null: false
     t.datetime "updated_at",     null: false
+  end
+
+  create_table "dashboards", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "demographics", force: :cascade do |t|

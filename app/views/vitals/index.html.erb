@@ -5,7 +5,7 @@
 <table>
   <thead>
     <tr>
-      <th>Vitalid</th>
+      <th>id</th>
       <th>Patientid</th>
       <th>Vital type</th>
       <th>Datetime</th>
@@ -18,7 +18,7 @@
   <tbody>
     <% @vitals.each do |vital| %>
       <tr>
-        <td><%= vital.vitalID %></td>
+        <td><%= vital.id %></td>
         <td><%= vital.patientID %></td>
         <td><%= vital.vital_type %></td>
         <td><%= vital.dateTime %></td>

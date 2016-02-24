@@ -69,6 +69,6 @@ class VitalsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def vital_params
-      params.require(:vital).permit(:vitalID, :patientID, :vital_type, :dateTime, :vitalDetails, :Units)
+      params.require(:vital).permit(:id, :patientID, :vital_type, :dateTime, :vitalDetails, :Units)
     end
 end
