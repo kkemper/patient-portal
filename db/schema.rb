@@ -11,10 +11,9 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160223192001) do
+ActiveRecord::Schema.define(version: 20160223215556) do
 
   create_table "clinical_visits", force: :cascade do |t|
-    t.string   "visitID"
     t.string   "patientID"
     t.string   "physicianID"
     t.string   "facilityID"
@@ -28,14 +27,13 @@ ActiveRecord::Schema.define(version: 20160223192001) do
 
   create_table "coverages", force: :cascade do |t|
     t.string   "patientID"
-    t.string   "policyID"
+    t.string   "policyid"
     t.date     "expirationDate"
     t.datetime "created_at",     null: false
     t.datetime "updated_at",     null: false
   end
 
   create_table "demographics", force: :cascade do |t|
-    t.string   "demoID"
     t.string   "address"
     t.string   "city"
     t.string   "state"
@@ -57,7 +55,6 @@ ActiveRecord::Schema.define(version: 20160223192001) do
   end
 
   create_table "medical_conditions", force: :cascade do |t|
-    t.string   "medicalID"
     t.string   "name"
     t.text     "symptom"
     t.text     "description"
@@ -66,7 +63,6 @@ ActiveRecord::Schema.define(version: 20160223192001) do
   end
 
   create_table "medical_facilities", force: :cascade do |t|
-    t.string   "facilityID"
     t.string   "demoID"
     t.text     "specialties"
     t.string   "phoneNumber"
@@ -83,7 +79,6 @@ ActiveRecord::Schema.define(version: 20160223192001) do
   end
 
   create_table "patients", force: :cascade do |t|
-    t.text     "patientID"
     t.text     "demoID"
     t.string   "fName"
     t.string   "lName"
@@ -100,13 +95,12 @@ ActiveRecord::Schema.define(version: 20160223192001) do
   end
 
   create_table "physicians", force: :cascade do |t|
-    t.string   "physicianID"
     t.string   "demoID"
     t.string   "fName"
     t.string   "lname"
     t.text     "specialty"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "user_names", force: :cascade do |t|
@@ -117,7 +111,6 @@ ActiveRecord::Schema.define(version: 20160223192001) do
   end
 
   create_table "vitals", force: :cascade do |t|
-    t.string   "vitalID"
     t.string   "patientID"
     t.string   "vital_type"
     t.datetime "dateTime"
