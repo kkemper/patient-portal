@@ -3,7 +3,9 @@ source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.5.1'
-# Faker makes fake data
+#Bootstrap
+gem 'bootstrap-sass', '3.2.0.0'
+# Faker makes fake data 
 gem 'faker', '1.6.3'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
