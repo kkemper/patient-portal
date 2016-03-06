@@ -37,7 +37,7 @@ gem 'bcrypt', '~> 3.1.10'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
-  # Use Sqlite3 as the database for Active Record
+  # Use SQLite3 as the database for Active Record
 gem 'sqlite3'
 
 end
