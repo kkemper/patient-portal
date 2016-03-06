@@ -57,3 +57,5 @@ group :development do
  end
 end
 
+ruby '2.2.4'
+
