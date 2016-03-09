@@ -57,5 +57,5 @@ group :development do
  end
 end
 
-ruby '2.2.4'
+ruby '2.2.1'
 
