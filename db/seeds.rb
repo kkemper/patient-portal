@@ -6,7 +6,7 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-
+patients.destroy_all
 
 100.times do |n|
 	fname = Faker::Name.first_name
@@ -19,3 +19,5 @@
 	clinicalTrials = Faker::Beer.name
 	Patient.create!(fName: fname, lName: lname, birthDate: birthdate, phone: phone, email: email, allergies: allergies, currentMedication: currentMedication, clinicalTrials: clinicalTrials)
 end
+
+100.times do |n|
