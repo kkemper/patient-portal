@@ -11,7 +11,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160309034031) do
+ActiveRecord::Schema.define(version: 20160325145526) do
+
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
 
   create_table "clinical_visits", force: :cascade do |t|
     t.string   "patientID"
@@ -21,21 +24,21 @@ ActiveRecord::Schema.define(version: 20160309034031) do
     t.time     "visitTime"
     t.string   "visitType"
     t.text     "diagnosis"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "coverages", force: :cascade do |t|
     t.string   "patientID"
     t.string   "policyid"
     t.date     "expirationDate"
-    t.datetime "created_at",     null: false
-    t.datetime "updated_at",     null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "dashboards", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "demographics", force: :cascade do |t|
@@ -46,8 +49,8 @@ ActiveRecord::Schema.define(version: 20160309034031) do
     t.string   "country"
     t.float    "longitude"
     t.float    "latitude"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "insurances", force: :cascade do |t|
@@ -55,32 +58,32 @@ ActiveRecord::Schema.define(version: 20160309034031) do
     t.string   "providerName"
     t.string   "coverageDetails"
     t.string   "providerContact"
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "medical_conditions", force: :cascade do |t|
     t.string   "name"
     t.text     "symptom"
     t.text     "description"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "medical_facilities", force: :cascade do |t|
     t.string   "demoID"
     t.text     "specialties"
     t.string   "phoneNumber"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "medical_histories", force: :cascade do |t|
     t.string   "patientID"
     t.string   "medicalID"
     t.date     "timeDiagnosed"
-    t.datetime "created_at",    null: false
-    t.datetime "updated_at",    null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "patients", force: :cascade do |t|
@@ -95,8 +98,8 @@ ActiveRecord::Schema.define(version: 20160309034031) do
     t.text     "allergies"
     t.text     "currentMedication"
     t.text     "clinicalTrials"
-    t.datetime "created_at",        null: false
-    t.datetime "updated_at",        null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "physicians", force: :cascade do |t|
@@ -104,33 +107,30 @@ ActiveRecord::Schema.define(version: 20160309034031) do
     t.string   "fName"
     t.string   "lname"
     t.text     "specialty"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
-
-# Could not dump table "user_names" because of following NoMethodError
-#   undefined method `[]' for nil:NilClass
 
   create_table "users", force: :cascade do |t|
     t.string   "name"
     t.string   "email"
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
     t.string   "password_digest"
     t.string   "remember_digest"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
-  add_index "users", ["email"], name: "index_users_on_email", unique: true
+  add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
 
   create_table "vitals", force: :cascade do |t|
     t.string   "patientID"
     t.string   "vital_type"
-    t.datetime "dateTime"
     t.string   "vitalDetails"
     t.string   "Units"
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
     t.boolean  "patient_entered"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.datetime "dateTime"
   end
 
 end
