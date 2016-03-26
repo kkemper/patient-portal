@@ -33,6 +33,5 @@ class User < ActiveRecord::Base
 	# Forgets a user.
 	def forget
 		update_attribute(:remember_digest, nil)
-
 	end
 end
