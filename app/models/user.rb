@@ -26,6 +26,7 @@ class User < ActiveRecord::Base
 	
 	#Retruns true if the token matches the digest.
 	def authenticated?(remember_token)
+		return false if remember_digest.nil?
 		Bcrypt::Password.new(remember_digest).is_password?(remember_token)
 	end	
 
