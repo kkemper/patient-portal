@@ -75,6 +75,10 @@ p {
 	font-weight: bold;
 }
 
+.open .dropdown-menu {
+	display:block;
+}
+
 #logo:hover {
 	color: white;
 	text-decoration: none;
@@ -186,7 +190,7 @@ input {
 }
 
 .checkbox {
-	margin-top: -10px;
+	margin-top: 10px;
 	margin-bottom: 10px;
 	span {
 		margin-left: 20px;
