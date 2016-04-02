@@ -20,4 +20,4 @@ patients.destroy_all
 	Patient.create!(fName: fname, lName: lname, birthDate: birthdate, phone: phone, email: email, allergies: allergies, currentMedication: currentMedication, clinicalTrials: clinicalTrials)
 end
 
-100.times do |n|
+#100.times do |n|
