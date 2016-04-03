@@ -20,13 +20,13 @@
 	Patient.create!(fName: fname, lName: lname, birthDate: birthdate, phone: phone, email: email, allergies: allergies, currentMedication: currentMedication, clinicalTrials: clinicalTrials)
 end
 
-User.create!(name: "Kit Kemper", email: "cgkemper@gmail.com", password: "sNbKbUvBN82EoMwF", password_confirmation: "sNbKbUvBN82EoMwF", admin: true)
+User.create!(name: "Kit Kemper", email: "cgkemper@gmail.com", password: "sNbKbUvBN82EoMwF", password_confirmation: "sNbKbUvBN82EoMwF", admin: true, activated: true, activated_at: Time.zone.now)
 
 100.times do |n|
 	name = Faker::Name.name
 	email = "example-#{n+1}@example.com"
 	password = "password"
-	User.create!(name: name, email: email, password: password, password_confirmation: password)
+	User.create!(name: name, email: email, password: password, password_confirmation: password, activated:true, activated_at: Time.zone.now)
 end
 
 
