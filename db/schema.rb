@@ -13,9 +13,6 @@
 
 ActiveRecord::Schema.define(version: 20160403133755) do
 
-  # These are extensions that must be enabled in order to support this database
-  enable_extension "plpgsql"
-
   create_table "clinical_visits", force: :cascade do |t|
     t.string   "patientID"
     t.string   "physicianID"
@@ -111,6 +108,9 @@ ActiveRecord::Schema.define(version: 20160403133755) do
     t.datetime "updated_at"
   end
 
+# Could not dump table "user_names" because of following NoMethodError
+#   undefined method `[]' for nil:NilClass
+
   create_table "users", force: :cascade do |t|
     t.string   "name"
     t.string   "email"
@@ -124,7 +124,7 @@ ActiveRecord::Schema.define(version: 20160403133755) do
     t.datetime "activated_at"
   end
 
-  add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
+  add_index "users", ["email"], name: "index_users_on_email", unique: true
 
   create_table "vitals", force: :cascade do |t|
     t.string   "patientID"
