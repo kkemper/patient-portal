@@ -1,11 +1,65 @@
 <% provide(:title, @user.name) %>
 <div class="row">
-	<aside class="col-md-4">
-		<section class="user_info">
-			<h1>
-				<%= gravatar_for @user %>
-				<%= @user.name %>
-			</h1>
-		</section>
-	</aside>
+  <aside class="col-md-2">
+    <section class="sidebar">
+      <ul class="nav nav-pills nav-stacked">
+        <li role="presentation" class="active"><%= link_to 'Home', user_path %></li>
+        <li role="presentation"><%= link_to 'Dashboard', dashboard_path %></li>
+        <li role="presentation"><%= link_to 'Reports', report_path %></li>
+        <li role="presentation"><%= link_to 'Billing', billing_path %></li>
+        <li role="presentation"><%= link_to 'Vitals', vital_path %></li>
+      </ul>
+    </section>
+  </aside>
+  <div class="col-md-4">
+  		<section class="patient_details">
+  			<h1>Patient Details</h1>
+        <ul class="no-bullets">
+          <li><h4><%= gravatar_for @user %><%= @user.name %></h4></li>
+          <li><b>ID:</b><%= @user.id %></li>
+          <li><b>Age:</b>33 yrs.</li>
+          <li><b>Consulting Physician:</b>Dr. Ericsson</li>
+        </ul>
+  		</section>
+  </div>
+  <div class="col-md-6">
+    <section class="appointments">
+      <h1>Past Appointments</h1>
+        <table class="table table">
+          <tr>
+            <th>Date</th>
+            <th>Reason for Visit</th>
+            <th>Follow-Up Instructions</th>
+          </tr>
+          <tr>
+            <td>06/12/2016</td>
+            <td>Flu</td>
+            <td>Appointment in 1 week</td> 
+          </tr>
+          <tr>
+            <td>06/19/2016</td>
+            <td>Follow-up from 06/12/2016</td>
+            <td>No follow-up</td>
+          </tr>
+          <tr>
+            <td>08/01/2016</td>
+            <td>Eye irritation</td>
+            <td>No follow-up</td>
+          </tr>
+          <tr>
+            <td>10/03/2016</td>
+            <td>Cough</td>
+            <td>Prescription w/3 mo. refill</td>
+          </tr>
+        </table>
+        <%= link_to 'Schedule Appointment', new_appointment_path, class: 'btn btn-primary btn-lg' %>
+    </section>
+  </div>
+</div>
+
+
+
+
+
+
 </div>

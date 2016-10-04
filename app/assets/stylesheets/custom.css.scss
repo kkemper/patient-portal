@@ -131,10 +131,14 @@ footer {
 	@include box_sizing;
 }
 
+ul.no-bullets {
+	list-style-type: none;
+}
+
 /* sidebar */
 
 aside {
-	section.user_info {
+	section.sidebar {
 		margin-top: 20px;
 	}
 	section {

@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  resources :appointments
+  resources :billings
+  resources :reports
   get 'sessions/new'
 
   get  'signup' => 'users#new'
