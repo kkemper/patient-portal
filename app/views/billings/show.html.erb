@@ -1,4 +1,16 @@
-<p id="notice"><%= notice %></p>
+<% provide(:title, @user.name) %>
+ <div class="row">
+  <aside class="col-md-2">
+    <section class="sidebar">
+      <ul class="nav nav-pills nav-stacked">
+        <li role="presentation"><%= link_to 'Home', user_path %></li>
+        <li role="presentation"><%= link_to 'Dashboard', dashboard_path %></li>
+        <li role="presentation"><%= link_to 'Reports', report_path %></li>
+        <li role="presentation" class="active"><%= link_to 'Billing', billing_path %></li>
+        <li role="presentation"><%= link_to 'Vitals', vital_path %></li>
+      </ul>
+    </section>
+  </aside>
 
 <%= link_to 'Edit', edit_billing_path(@billing) %> |
 <%= link_to 'Back', billings_path %>

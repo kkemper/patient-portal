@@ -3,7 +3,7 @@ module ApplicationHelper
 	def full_title(page_title = '')
 		base_title = "Patient Portal"
 		if page_title.empty?
-			base title
+			base_title
 		else
 			page_title + " | " + base_title
 		end

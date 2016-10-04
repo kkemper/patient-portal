@@ -15,6 +15,7 @@ class VitalsController < ApplicationController
   # GET /vitals/new
   def new
     @vital = Vital.new
+    @user = User
   end
 
   # GET /vitals/1/edit

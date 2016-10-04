@@ -1,5 +1,5 @@
 <% provide(:title, @user.name) %>
-<div class="row">
+ <div class="row">
   <aside class="col-md-2">
     <section class="sidebar">
       <ul class="nav nav-pills nav-stacked">
@@ -15,10 +15,10 @@
   		<section class="patient_details">
   			<h1>Patient Details</h1>
         <ul class="no-bullets">
-          <li><h4><%= gravatar_for @user %><%= @user.name %></h4></li>
+          <li><h4><%= @user.name %></h4></li>
           <li><b>ID:</b><%= @user.id %></li>
-          <li><b>Age:</b>33 yrs.</li>
-          <li><b>Consulting Physician:</b>Dr. Ericsson</li>
+          <li><b>Age:</b> 33 yrs.</li>
+          <li><b>Consulting Physician:</b> Dr. Ericsson</li>
         </ul>
   		</section>
   </div>

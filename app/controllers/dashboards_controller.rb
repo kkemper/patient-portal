@@ -15,6 +15,7 @@ class DashboardsController < ApplicationController
   # GET /dashboards/new
   def new
     @dashboard = Dashboard.new
+    @user = User
   end
 
   # GET /dashboards/1/edit
