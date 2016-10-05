@@ -11,7 +11,117 @@
       </ul>
     </section>
   </aside>
-
-
-<%= link_to 'Edit', edit_dashboard_path(@dashboard) %> |
-<%= link_to 'Back', dashboards_path %>
+   <div class="col-md-2">
+      <section class="patient_details">
+        <h4>Patient Details</h4>
+        <ul class="no-bullets">
+          <li><h5><%= @user.name %></h5></li>
+          <li><b>ID:</b><%= @user.id %></li>
+          <li><b>DOB:</b> 01/24/1970</li>
+          <li><b>Age:</b> 33 yrs.</li>
+        </ul>
+      </section>
+  </div>
+   <div class="col-md-4">
+      <section class="patient_medication">
+        <h4>Medication</h4>
+        <ul class="no-bullets">
+          <li><b>Levbid: </b>.375mg</li>
+          <li><b>Lipitor: </b>10mg</li>
+        </ul>
+      </section>
+  </div>
+   <div class="col-md-4">
+      <section class="patient-problems">
+        <h4>Problems</h4>
+        <ul class="no-bullets">
+          <li><b>Influenza: </b>06/12/2016</li>
+          <li><b>Eye Irritaion: </b>08/01/2016</li>
+          <li><b>Cough: </b>10/03/2016</li>
+        </ul>
+      </section>
+  </div>
+</div>
+<div class="row">
+  <aside class="col-md-2">
+    <section>
+    </section>
+  </aside>
+  <div class="col-md-2">
+    <section class="patient_doctor_vitals">
+      <h4>Clinical Vitals</h4>
+      <p>The information below was collected by your physician at your last visit.</p>
+      <ul class="no-bullets">
+        <li><b>Height:</b> 66 in.</li>
+        <li><b>Weight:</b> 120 lbs.</li>
+        <li><b>BMI:</b> 19.2</li>
+        <li><b>BP:</b> 120/80</li>
+        <li><b>Temp(deg. F):</b> 98.6</li>
+        <li><b>Heart Rate:</b> 70 bpm.</li>
+        <li><b>Resp. Rate:</b> 7bpm</li>
+      </ul>
+      <p><i>Last updated: 10/03/2016</i></p>
+    </section>
+  </div>
+  <div class="col-md-4">
+    <section class="patient-vitals">
+      <h4>Patient Vitals</h4>
+      <p>The records below have been created by the patient.</p>
+      <table class="table table-responsive">
+        <tr>
+          <th>Date</th>
+          <th>BP</th>
+          <th>Blood Glucose</th>
+          <th>Heart Rate</th>
+        </tr>
+        <tr>
+          <td>10/04/2016</td>
+          <td>120/80</td>
+          <td>15 mmol/l</td>
+          <td>70 bpm</td>
+        </tr>
+        <tr>
+          <td>10/03/2016</td>
+          <td>118/84</td>
+          <td>14 mmol/l</td>
+          <td>64 bpm</td>
+        </tr>
+        <tr>
+          <td>10/02/2016</td>
+          <td>110/70</td>
+          <td>15 mmol/l</td>
+          <td>71 bpm</td>
+        </tr>
+      </table>
+      <p><i>Last updated: 10/04/2016</i></p>
+    </section>
+  </div>
+  <div class="col-md-4">
+    <section class="patient-allergies">
+      <h4>Allergies</h4>
+      <table class="table table-responsive">
+        <tr>
+          <th>Year</th>
+          <th>Allergy</th>
+          <th>Reaction</th>
+        </tr>
+        <tr>
+          <td>Unknown</td>
+          <td>Peanuts</td>
+          <td>Swelling</td>
+        </tr>
+        <tr>
+          <td>2004</td>
+          <td>Sulpha Drugs</td>
+          <td>Breathing Problems</td>
+        </tr>
+        <tr>
+          <td>2010</td>
+          <td>Codeine</td>
+          <td>Nausea</td>
+        </tr>
+      </table>
+      <p><i>Last updated: 10/03/2016</i></p>
+    </section>
+  </div>
+</div>

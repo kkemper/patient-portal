@@ -10,6 +10,7 @@ class VitalsController < ApplicationController
   # GET /vitals/1
   # GET /vitals/1.json
   def show
+    @user = User.find(params[:id])
   end
 
   # GET /vitals/new

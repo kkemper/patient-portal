@@ -11,6 +11,18 @@
       </ul>
     </section>
   </aside>
-
-<%= link_to 'Edit', edit_billing_path(@billing) %> |
-<%= link_to 'Back', billings_path %>
+  <div class = "col-md-10">
+    <section class="billing">
+    <h1>Billing</h1>
+    <ul class="no-bullets">
+      <li><h4><%= @user.name %></h4></li>
+      <li><b>ID:</b><%= @user.id %></li>
+      <li><b>Provider:</b> BM Health Insurance</li>
+      <li><b>Phone:</b> 775-555-5555</li>
+      <li><b>Deductible:</b> $1000.00</li>
+      <li><b>Insured Amount:</b> $15000.00</li>
+    </ul>
+    <%= link_to 'Make a Payment', #, class: 'btn btn-primary btn-lg' %>
+    </section>
+  </div>
+</div>

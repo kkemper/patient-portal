@@ -10,6 +10,7 @@ class BillingsController < ApplicationController
   # GET /billings/1
   # GET /billings/1.json
   def show
+    @user = User.find(params[:id])
   end
 
   # GET /billings/new
